@@ -25,8 +25,8 @@ bordas quadradas, sombras "blocadas" e paleta neon).
 ## Tecnologias
 
 - HTML5
-- CSS3 (variáveis CSS / custom properties)
-- JavaScript (alternância de tema)
+- CSS
+- JavaScript
 
 ## Como visualizar
 
@@ -34,4 +34,4 @@ Basta abrir o arquivo `template.html` em qualquer navegador.
 
 ## Autor
 
-Danilo - Estudante de Computação
+Danilo 
