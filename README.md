@@ -1,4 +1,4 @@
-# Portfólio 
+# Portfólio - Danilo
 
 Site pessoal de portfólio desenvolvido para a entrega avaliativa da 2ª Unidade
 da disciplina Introdução à Computação (CESAR School).
@@ -15,11 +15,22 @@ bordas quadradas, sombras "blocadas" e paleta neon).
 - `projetos.html` - lista de projetos desenvolvidos
 - `contato.html` - contatos, referências de estudo e inspirações
 
+## Funcionalidades
+
+- Layout responsivo usando Flexbox
+- Tema claro/escuro alternável (botão no canto superior direito)
+- Navegação entre páginas via menu fixo
+- Tags semânticas (`header`, `nav`, `main`, `section`, `footer`)
+
 ## Tecnologias
 
 - HTML5
-- CSS3
-- JavaScript
+- CSS3 (variáveis CSS / custom properties)
+- JavaScript (alternância de tema)
+
+## Como visualizar
+
+Basta abrir o arquivo `template.html` em qualquer navegador.
 
 ## Autor
 
