@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Danilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --cor-fundo: #fafafa;
+        --cor-texto: #171717;
+        --cor-texto-suave: #525252;
+        --cor-texto-fraco: #a3a3a3;
+        --cor-borda: #e5e5e5;
+        --cor-acento: #2bd576;
+        --cor-acento-2: #ff5277;
+      }
+
+      body {
+        font-family: "VT323", monospace;
+        font-size: 20px;
+        line-height: 26px;
+        color: var(--cor-texto-suave);
+        background: var(--cor-fundo);
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      .pagina {
+        max-width: 576px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      .cabecalho-titulo {
+        font-family: "Press Start 2P", monospace;
+        font-size: 22px;
+        color: var(--cor-texto);
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+      }
+
+      .cabecalho-sub {
+        font-family: "Press Start 2P", monospace;
+        font-size: 10px;
+        color: var(--cor-acento);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+      }
+
+      nav.menu {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+      }
+
+      nav.menu a {
+        font-family: "Press Start 2P", monospace;
+        font-size: 10px;
+        color: var(--cor-texto);
+        text-decoration: none;
+        padding: 8px 12px;
+        border: 2px solid var(--cor-texto);
+        background: var(--cor-fundo);
+        box-shadow: 3px 3px 0 var(--cor-texto);
+        transition: transform 0.1s, box-shadow 0.1s;
+      }
+
+      nav.menu a:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 var(--cor-texto);
+      }
+
+      nav.menu a.ativo {
+        background: var(--cor-acento);
+        color: #0a0a0a;
+        border-color: var(--cor-acento);
+        box-shadow: 3px 3px 0 var(--cor-texto);
+      }
+
+      .secao {
+        margin-bottom: 24px;
+      }
+
+      .secao-titulo {
+        font-family: "Press Start 2P", monospace;
+        font-size: 14px;
+        color: var(--cor-texto);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--cor-texto);
+        display: inline-block;
+      }
+
+      .lista {
+        list-style: none;
+        display: grid;
+        gap: 12px;
+      }
+
+      .item {
+        border-top: 3px dashed var(--cor-borda);
+        padding: 16px 0;
+      }
+
+      .item-link {
+        display: block;
+        text-decoration: none;
+      }
+
+      .item-topo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+
+      .item-nome {
+        color: var(--cor-texto);
+        font-weight: 600;
+      }
+
+      .item-nome::before {
+        content: "▸ ";
+        color: var(--cor-acento-2);
+      }
+
+      .item-descricao {
+        font-size: 14px;
+      }
+
+      .item-link:hover .item-nome {
+        color: var(--cor-acento-2);
+      }
+
+      .contato-lista {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .contato-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .contato-icone {
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--cor-texto);
+        box-shadow: 3px 3px 0 var(--cor-acento);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-family: "Press Start 2P", monospace;
+        font-size: 11px;
+        color: var(--cor-texto);
+      }
+
+      .contato-item a {
+        color: var(--cor-texto-suave);
+        text-decoration: none;
+      }
+
+      .contato-item a:hover {
+        color: var(--cor-acento-2);
+      }
+
+      .rodape {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+        border-top: 3px dashed var(--cor-borda);
+      }
+
+      .rodape-dominio {
+        font-size: 14px;
+      }
+
+      .rodape-marca {
+        font-family: "Press Start 2P", monospace;
+        font-size: 14px;
+        color: var(--cor-acento-2);
+      }
+
+      body.escuro {
+        --cor-fundo: #0d0d0f;
+        --cor-texto: #f5f5f5;
+        --cor-texto-suave: #b8b8c0;
+        --cor-texto-fraco: #6b6b76;
+        --cor-borda: #2a2a33;
+        --cor-acento: #39ff8f;
+        --cor-acento-2: #ff5f8f;
+      }
+
+      body.escuro nav.menu a {
+        box-shadow: 3px 3px 0 var(--cor-acento);
+      }
+
+      body.escuro nav.menu a:hover {
+        box-shadow: 1px 1px 0 var(--cor-acento);
+      }
+
+      body.escuro nav.menu a.ativo {
+        color: #0a0a0a;
+        box-shadow: 3px 3px 0 var(--cor-acento-2);
+      }
+
+      body.escuro .contato-icone {
+        box-shadow: 3px 3px 0 var(--cor-acento-2);
+      }
+
+      .btn-tema {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        border: 2px solid var(--cor-texto);
+        border-radius: 0;
+        box-shadow: 3px 3px 0 var(--cor-texto);
+
+        background: var(--cor-fundo);
+        color: var(--cor-texto-suave);
+
+        transition:
+          background 0.3s,
+          border-color 0.3s,
+          color 0.3s,
+          transform 0.1s,
+          box-shadow 0.1s;
+      }
+
+      .btn-tema:hover {
+        color: var(--cor-texto);
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 var(--cor-texto);
+      }
+
+      body.escuro .btn-tema {
+        box-shadow: 3px 3px 0 var(--cor-acento);
+      }
+
+      body.escuro .btn-tema:hover {
+        box-shadow: 1px 1px 0 var(--cor-acento);
+      }
+
+      .btn-tema img {
+        width: 18px;
+        height: 18px;
+        image-rendering: pixelated;
+      }
+
+      .icone-lua {
+        display: none;
+      }
+
+      .icone-sol {
+        display: block;
+      }
+
+      body.escuro .icone-lua {
+        display: block;
+      }
+
+      body.escuro .icone-sol {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-tema" onclick="alternarTema()">
+      <img src="sol.png" class="icone-sol" alt="tema claro">
+      <img src="lua.png" class="icone-lua" alt="tema escuro">
+    </button>
+    <main class="pagina">
+      <header>
+        <h1 class="cabecalho-titulo">Contato</h1>
+        <p class="cabecalho-sub">// continue?</p>
+      </header>
+
+      <!-- Navegação -->
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html">SOBRE</a>
+        <a href="projetos.html">PROJETOS</a>
+        <a href="contato.html" class="ativo" aria-current="page">CONTATO</a>
+      </nav>
+
+      <!-- Contatos -->
+      <section class="secao">
+        <h2 class="secao-titulo">Fale comigo</h2>
+        <ul class="contato-lista">
+          <li class="contato-item">
+            <span class="contato-icone">GH</span>
+            <a href="https://github.com/DanilolBorba" target="_blank" rel="noopener">GitHub</a>
+          </li>
+          <li class="contato-item">
+            <span class="contato-icone">in</span>
+            <a href="https://www.linkedin.com/in/danilocesarmiranda/" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+          <li class="contato-item">
+            <span class="contato-icone">@</span>
+            <a href="mailto:contato@danilo.dev">daniloborba2000@gmail.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Referências de estudo -->
+      <section class="secao">
+        <h2 class="secao-titulo">Referências de estudo</h2>
+        <ul class="lista">
+          <li class="item">
+            <div class="item-topo">
+              <span class="item-nome">CISCO Networking Academy - JavaScript Essentials 1</span>
+            </div>
+            <p class="item-descricao">
+              Curso introdutório de JavaScript que cobre variáveis, tipos de dados,
+              operadores e interação com o usuário. Concluído como parte da
+              entrega avaliativa da 2ª Unidade.
+            </p>
+          </li>
+          <li class="item">
+            <a href="https://developer.mozilla.org/pt-BR/" class="item-link" target="_blank" rel="noopener">
+              <div class="item-topo">
+                <span class="item-nome">MDN Web Docs</span>
+              </div>
+              <p class="item-descricao">
+                Documentação de referência para HTML, CSS e JavaScript, usada
+                para consultar sintaxe e boas práticas.
+              </p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://validator.w3.org/" class="item-link" target="_blank" rel="noopener">
+              <div class="item-topo">
+                <span class="item-nome">W3C Markup Validation Service</span>
+              </div>
+              <p class="item-descricao">
+                Ferramenta usada para validar a marcação HTML do site de
+                portfólio.
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- O que me inspira -->
+      <section class="secao">
+        <h2 class="secao-titulo">O que me inspira</h2>
+        <p>
+          Tenho interesse em jogos, projetos de código aberto e em como
+          ferramentas simples de web (HTML, CSS e JavaScript) podem ser usadas
+          para criar experiências interativas. Acompanhar comunidades de
+          desenvolvedores e ver outros portfólios e repositórios no GitHub me
+          motiva a continuar estudando.
+        </p>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="rodape">
+        <span class="rodape-dominio">danilo.dev</span>
+        <span class="rodape-marca">Dnl</span>
+      </footer>
+    </main>
+
+    <script>
+      function alternarTema() {
+        document.body.classList.toggle("escuro");
+      }
+    </script>
+  </body>
+</html>
